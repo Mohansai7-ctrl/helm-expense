@@ -1,0 +1,81 @@
+#1)config map for DB_HOST
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend
+  namespace: expense
+data:
+  DB_HOST: mysql
+
+#2)Deployment of backend application pods
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: expense
+  labels:
+    app: backend
+    tier: app
+    project: expense
+spec:
+  replicas: {{ .Values.deployment.replicas }}
+  selector:
+    matchLabels:
+      app: backend
+      tier: app
+      project: expense
+  template:
+    metadata:
+      name: backend
+      labels:
+        app: backend
+        tier: app
+        project: expense
+    spec:
+      containers:
+      - name: backend
+        image: mohansai7/backend:{{ .Values.deployment.imageVersion }}
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 100m
+            memory: 128Mi
+        envFrom:
+          configMapRef:
+          - name: backend
+
+
+---
+#3)service
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-svc
+  namespace: expense
+spec:
+  selector:
+    app: backend
+    tier: app
+    project: expense
+  ports:
+  - name: backend-svc-port
+    protocol: TCP
+    port: {{ .Values.service.port }}
+    targetPort: 8080
+
+#4)Using HPA Autoscaler, for this prerequisites are install metric server and include resources in deployment container creation
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: backend
+  namespace: expense
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: backend
+  minReplicas: 1
+  macReplicas: 10
+  targetCPUUtilizationPercentage: {{ .Values.hpa.targetCPUUtilization }}
