@@ -17,13 +17,13 @@ spec:
     matchLabels:
       app: nginx
       tier: frontend
-    template:
-      metadata:
-        name: nginx
-        labels:
-          app: nginx
-          tier: frontend
-      spec:
-        containers:
-        - name: nginx
-          image: nginx:{{ .Values.deployment.imageVersion }}
+  template:
+    metadata:
+      name: nginx
+      labels:
+        app: nginx
+        tier: frontend
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:{{ .Values.deployment.imageVersion }}
