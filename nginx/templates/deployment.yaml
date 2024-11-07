@@ -4,8 +4,8 @@
 # ./get_helm.sh
 # to check, helm version
 
-apiVersion: v1
-kind: Pod
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: nginx
   labels:
