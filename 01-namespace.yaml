@@ -5,3 +5,56 @@ metadata:
   labels:
     project: expense
     environment: dev
+
+# commands:
+#  262  07/11/24 17:59:48 cd ../mysql/
+#   263  07/11/24 17:59:54 helm install mysql .
+#   264  07/11/24 17:59:59 cd ../backend/
+#   265  07/11/24 18:01:27 kubectl get pods
+#   266  07/11/24 18:01:39 kubectl logs mysql-5b6987ffd6-tcjd7 -c mysql
+#   267  07/11/24 18:01:51 kubectl describe pod mysql-5b6987ffd6-tcjd7
+#   268  07/11/24 18:04:55 history
+#   269  07/11/24 18:05:41 kubectl get pods
+#   270  07/11/24 18:05:44 clear
+#   271  07/11/24 18:07:03 helm install backend .
+#   272  07/11/24 18:07:08 helm list
+#   273  07/11/24 18:09:00 kubectl get pods
+#   274  07/11/24 18:09:32 kubectl logs backend-7cd5996884-wzll4
+#   275  07/11/24 18:09:40 kubectl logs backend-7cd5996884-wzll4 -c backend
+#   276  07/11/24 18:09:47 kubectl get pods
+#   277  07/11/24 18:09:55 cd ../frontend/
+#   278  07/11/24 18:10:09 helm install frontend .
+#   279  07/11/24 18:10:12 helm list
+#   280  07/11/24 18:10:26 kubectl get pods
+#   281  07/11/24 18:10:41 kubectl describe frontend-5c898f4c86-mnrfr -c frontend
+#   282  07/11/24 18:10:50 kubectl logs frontend-5c898f4c86-mnrfr -c frontend
+#   283  07/11/24 18:11:13 kubectl describe pod frontend-5c898f4c86-mnrfr
+#   284  07/11/24 18:11:25 kubectl get pods
+#   285  07/11/24 18:12:32 helm uninstall backend
+#   286  07/11/24 18:12:36 git pull
+#   287  07/11/24 18:12:40 cd ../backend
+#   288  07/11/24 18:12:46 helm install backend .
+#   289  07/11/24 18:12:53 cd ..frontend
+#   290  07/11/24 18:12:58 cd ../frontend
+#   291  07/11/24 18:13:09 helm install frontend .
+#   292  07/11/24 18:13:19 helm uninstall frontend
+#   293  07/11/24 18:13:25 helm install frontend .
+#   294  07/11/24 18:15:29 kubectl get pods
+#   295  07/11/24 18:15:46 kubectl describe pod frontend-5c898f4c86-6s7hn -c frontend
+#   296  07/11/24 18:15:54 kubectl describe pod frontend-5c898f4c86-6s7hn
+#   297  07/11/24 18:17:05 kubectl logs frontend-5c898f4c86-6s7hn -c frontend
+#   298  07/11/24 18:19:54 kubectl get pods
+#   299  07/11/24 18:20:09 kubectl describe pod backend-7cd5996884-pcbdn
+#   300  07/11/24 18:20:21 kubectl describe pod backend-7cd5996884-pcbdn -c backend
+#   301  07/11/24 18:21:49 clear
+#   302  07/11/24 18:21:52 kubectl get pods
+#   303  07/11/24 18:22:46 helm uninstall backend
+#   304  07/11/24 18:22:52 helm uninstall frontend
+#   305  07/11/24 18:22:56 git pull
+#   306  07/11/24 18:22:59 cd ../backend/
+#   307  07/11/24 18:23:04 helm install backend .
+#   308  07/11/24 18:23:10 cd ../frontend/
+#   309  07/11/24 18:23:18 helm install frontend .
+#   310  07/11/24 18:23:23 kuectl get pods
+#   311  07/11/24 18:23:30 kubectl get pods
+#   312  07/11/24 18:24:55 kubectl describe pod frontend-5c898f4c86-2lt45
