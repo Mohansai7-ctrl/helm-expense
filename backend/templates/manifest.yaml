@@ -80,5 +80,5 @@ spec:
     kind: Deployment
     name: backend
   minReplicas: 1
-  macReplicas: 10
+  maxReplicas: 10
   targetCPUUtilizationPercentage: {{ .Values.hpa.targetCPUUtilization }}
