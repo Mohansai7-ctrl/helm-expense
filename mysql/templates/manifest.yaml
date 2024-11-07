@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: mysql:{{ .Values.deployment.imageVersion }}
+        image: mohansai7/mysql:{{ .Values.deployment.imageVersion }}
 
 ---
 apiVersion: v1
