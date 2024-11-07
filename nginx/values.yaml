@@ -1,6 +1,6 @@
 deployment:
   replicas: 2
-  imageVersion: alpine
+  imageVersion: stable-bookworm-perl
 service:
   type: LoadBalancer
   port: 80
