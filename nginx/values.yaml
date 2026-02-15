@@ -6,3 +6,5 @@ deployment:
 service:
   type: LoadBalancer
   port: 80
+metadata:
+  name: nginx-dev
